@@ -1,0 +1,23 @@
+.title-line {
+    @include title-line($clr-divider);
+}
+
+.more-slash {
+    @include more-slash('title-line');    
+}
+
+.title-line-w {
+    @include title-line($clr-light);
+}
+
+.more-slash-w {
+    @include more-slash('slash_white');    
+}
+
+.title-line-bl {
+    @include title-line($clr-black);
+}
+
+.more-slash-bl {
+    @include more-slash('slash_black');    
+}

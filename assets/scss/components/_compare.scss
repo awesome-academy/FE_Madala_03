@@ -1,0 +1,11 @@
+.compare {
+    padding: 0 15px;
+    margin-top: 20px;
+    h3.title {
+        @include title-part;
+    }
+    p {
+        font-size: 14px;
+        color: $clr-grey;
+    }
+}

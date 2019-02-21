@@ -1,0 +1,47 @@
+.other
+    .container
+        .row
+            .col-sm-6.col-md-4.about
+                h4.title-g Về chúng tôi
+                +title-line
+                .content-container
+                    img(src='../images/logo.png')
+                    .title Giới thiệu chung về mỹ phẩm handmade Mandala 
+                    p.description
+                        | Hi, chào các nàng ... sau khá nhiều lời hứa hão thì hôm nay
+                        | tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức,
+                        | khi mà dân tình xô nhau đi tắm Free để giải nhiệt. Hi, chào các nàng ...
+                        | sau khá nhiều lời hứa hão thì hôm nay tớ quay lại hâm nóng cái Blog này vào
+                        | một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt.
+                        | sau khá nhiều lời hứa hão thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức,
+                        | khi mà dân tình xô nhau đi tắm Free để giải nhiệt.  
+                    a(href='#').readmore Xem thêm
+            .col-sm-6.col-md-4.blog
+                h4.title-g: a(href='/blog.html') Blog
+                +title-line
+                .content-container
+                    img(src='../images/blog_image.png')
+                    a.title(href='/blog_detail.html') Review son kem Bourjois Velvet
+                    .description 
+                        | Hi, chào các nàng ... sau khá nhiều lời hứa hão thì hôm nay tớ quay lại hâm nóng
+                        | cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free 
+                        | để giải nhiệt. 
+                    .author Bởi NamTran ( 27 / 05 / 2015 )
+                    .optional
+                        a.readmore(href="/blog_detail.html") Đọc thêm
+                        span.noOfComment 23 Bình luận
+            .col-sm-12.col-md-4.send-email
+                .row
+                    .col-sm-6.col-md-12.email
+                        h4.title-g Gửi email cho chúng tôi
+                        +title-line
+                        .content-container
+                            input(type='text' placeholder='Email của bạn')
+                            p Gửi email để nhận những ưu đãi mới nhất
+                            a(href='#').btn.btn-send Gửi 
+                    .col-sm-6.col-md-12.tag
+                        h4.title-g Tag sản phẩm
+                        +title-line
+                        .content-container
+                            +cate(categories)
+                            

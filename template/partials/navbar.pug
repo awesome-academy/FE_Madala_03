@@ -1,0 +1,56 @@
+.navbar
+    .container.navbar-container
+        .logo
+            a(href="#")
+                img(src='./images/logo.png')
+        .header-link
+            .menu
+                input#toggle(type='checkbox')
+                label.navbar-toggle(for="toggle"): i.burger-menu-icon
+                ul#nav-ul
+                    li
+                        a(href="/home.html") Trang chủ
+                    li
+                        a(href="/about.html") Giới thiệu
+                    li
+                        input#dropdown(type='checkbox')
+                        label(for="dropdown") Sản phẩm
+                            i.chevron.bottom
+                        .dropdown-menu
+                            //- Iterations submenu
+                            each data in submenu
+                                +dropdown-item(data)
+                            
+                    li
+                        a(href="/blog.html") Tin tức
+                    li
+                        a(href="/contact.html") Bản đồ
+                    li
+                        a(href="/about.html") Liên hệ
+
+            .header-cart
+                input#cart_label(type='checkbox')
+                label(for="cart_label")
+                    i.cart-icon
+                .header-cart-container#cart
+                    ul.header-cart--item
+                        li
+                            img.product-image(src="/images/cart_thumb.jpg" alt="Áo sơ mi nam")
+                            .name-price 
+                                h6.product-name Áo sơ mi nam
+                                p.product-price 120.000đ
+                            a(href='#')
+                                i(class='icon-remove')
+                        li
+                            img.product-image(src="/images/cart_thumb.jpg" alt="Áo sơ mi nam")
+                            .name-price 
+                                h6.product-name Áo sơ mi nam
+                                p.product-price 120.000đ
+                            a(href='#')
+                                i(class='icon-remove')
+                    .header-cart-total
+                        span Tổng số
+                        span.total-price 240.000đ
+                    a.btn.btn-buy.btn--color-black(href="/cart.html") Giỏ hàng
+            .header-search
+                input(class='search-icon' type='search')

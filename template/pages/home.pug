@@ -1,0 +1,20 @@
+extends ../layouts/summary
+append config
+	- var title = "Home"
+	- var metaDesc = "My home page"
+block head_end
+	
+block content
+
+	include ../partials/header
+	include ../partials/promotion
+	include ../partials/feature
+	include ../partials/feedback
+	include ../partials/products
+	include ../partials/social
+	include ../partials/other
+	include ../partials/footer
+	include ../components/newsletter
+
+block body_end
+	

@@ -1,0 +1,278 @@
+.navbar {
+    position: relative;
+    background: #ffffff42;
+    height: 78px;
+    box-shadow: 0 2px $clr-0-lighter;
+    width: 100%;
+    z-index: 1;
+}
+
+.navbar-container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar::after {
+    content: " ";
+    clear: both;
+}
+
+.chevron::before {
+    border-style: solid;
+    border-width: 0.1em 0.1em 0 0;
+    content: '';
+    display: inline-block;
+    height: 0.45em;
+    left: 0.45em;
+    position: relative;
+    top: 0.15em;
+    transform: rotate(-45deg);
+    vertical-align: top;
+    width: 0.45em;
+}
+
+.chevron.bottom:before {
+    top: .35em;
+    transform: rotate(135deg);
+}
+
+.burger-menu-icon {
+    background: url('../images/burger_icon.png') no-repeat;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+}
+
+.header-link {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    order: 1;
+    @include breakpoint(laptops-desktops) {
+        order: 0;
+        padding-right: 100px;
+    }
+    .navbar-toggle {
+        @include breakpoint(laptops-desktops) {
+            display: none;
+        }
+    }
+    >#nav-ul {
+        display: none;
+        @include breakpoint(laptops-desktops) {
+            display: flex;
+        }
+    }
+    input:checked ~ ul#nav-ul {
+        display: block;
+    }
+    >ul {
+        position: absolute;
+        width: 100%;
+        top: 78px;
+        left: 0;
+        background: $clr-black;
+        padding: 1rem;
+        color: $clr-light;
+        @include breakpoint(laptops-desktops) {
+            position: static;
+            background: none;
+            display: flex;
+            list-style: none;
+        }
+        >li {
+            @include breakpoint(laptops-desktops) {
+                display: flex;
+                justify-content: center;
+                padding-right: 25px;
+                position: relative;
+            }
+            >a, >label {
+                color: $clr-light;
+                @include breakpoint(laptops-desktops) {
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    color: $clr-0-darker;
+                    font-weight: bold;
+                    font-size: 12px;
+                    &:hover {
+                        color: $clr-1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.dropdown-menu {
+    padding-left: 25px;
+    ul {
+        list-style: none;
+        li {
+            padding-left: 20px;
+            a {
+                color: $clr-0-light;
+            }
+        }
+    }
+}
+
+@include breakpoint(laptops-desktops) {
+    .dropdown-menu {
+        &::before {
+            @include before_drop_container;
+        }
+        display: none;
+        &__item {
+            padding-right: 30px;
+            width: 150px;
+            &-tag {
+                color: $clr-black;
+                border-bottom: 1px solid $clr-divider;
+                padding-bottom: 14px;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+            &-list {
+                padding-left: 0;
+                padding-top: 20px;
+                a {
+                    color: #737373;
+                    text-decoration: none;
+                    &:hover {
+                        color: $clr-1;
+                        position: relative;
+                        left: -8px;
+                    }
+                }
+                li {
+                    list-style: none;
+                }
+                li:hover {
+                    list-style-type: square;
+                    list-style-position: inside;
+                }
+            }
+        }
+    }
+    .menu ul li input:checked ~ .dropdown-menu {
+        @include drop_container;
+        display: flex;
+    }
+    .menu ul li input:not(:checked) ~ .dropdown-menu {
+        display: none;
+    }
+}
+
+.header-cart {
+    position: relative;
+    @include child_center;
+    padding-right: 25px;
+    i.cart-icon {
+        background: url('../images/cart_icon.png') no-repeat;
+        @include icon;
+    }
+    &-container {
+        display: none;
+    }
+    &-container::before {
+        @include before_drop_container;
+    }
+    input:checked ~ &-container {
+        @include drop_container;
+        padding: 10px;
+        width: 200px;
+    }
+}
+
+.header-search {
+    padding-right: 25px;
+    .search-icon {
+        padding: 5px 10px 5px 32px;
+        background: url('../images/search_icon.png') no-repeat 9px center;
+        @include icon;
+    }
+    input[type='search'] {
+        cursor: pointer;
+        border: none;
+        transition: all .5s;
+        &:focus {
+            width: 140px;
+            padding-left: 32px;
+            color: $clr-black;
+            background-color: $clr-light;
+            cursor: auto;
+        }
+    }
+}
+
+ul.header-cart--item {
+    list-style: none;
+    padding-left: 0;
+    li {
+        display: flex;
+        padding-bottom: 17px;
+    }
+}
+
+.header-cart img.product-image {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+}
+
+.name-price {
+    display: flex;
+    flex-direction: column;
+}
+
+h6.product-name {
+    display: block;
+    color: #000000;
+    font-weight: bold;
+}
+
+p.product-price {
+    display: block;
+    color: $clr-1-light;
+    font-weight: bold;
+}
+
+.header-cart-total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    span {
+        color: #000000;
+        font-weight: bold;
+    }
+    .total-price {
+        color: $clr-1-light;
+        font-weight: bolder;
+    }
+}
+
+.btn-buy {
+    padding: 5px 10px;
+    background: #212121;
+    width: 72px;
+    height: 22px;
+    color: #ffffff;
+    text-transform: uppercase;
+    &:hover {
+        text-decoration: none;
+        color: #9cb262;
+    }
+}
+
+.icon-remove {
+    position: absolute;
+    right: 10px;
+    &::after {
+        @include closeSign;
+    }
+}

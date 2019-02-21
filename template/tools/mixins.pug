@@ -42,20 +42,20 @@ mixin cate(data)
 
 //- Product item - at home page
 mixin product-item-home(img, branch, name, price_n, price_o)
-    .product__item
-        .product__item__img
+    .product-item
+        .product-item-img
             img(src=img)
-        .product__item__branch #{branch}
-        a(href="/detail.html").product__item__name #{name}
+        .product-item__branch #{branch}
+        a(href="/detail.html").product-item__name #{name}
         hr.hr-name
-        .product__item__price
-            span.product__item__price--new(data-end='đ') #{price_n}
-            span.product__item__price--old(data-end='đ') #{price_o}
-        .product__item--action
-            a.product__item--action-buy(href='/cart.html') Mua hàng
-            .product__item--action-heart
+        .product-item__price
+            span.product-item__price--new(data-end='đ') #{price_n}
+            span.product-item__price--old(data-end='đ') #{price_o}
+        .product-item__action
+            a.product-item__action--buy(href='/cart.html') Mua hàng
+            .product-item__action--heart
                 i.heart-icon
-            .product__item--action-reload
+            .product-item__action--reload
                 i.reload-icon
 
 //- Product item
@@ -86,9 +86,9 @@ mixin new-post-item(img)
 
 //- Action behavior
 mixin action-behavior
-    .product__item--action
-        a.product__item--action-buy(href='/cart.html') Mua hàng
-        .product__item--action-heart
+    .product-item__action
+        a.product-item__action--buy(href='/cart.html') Mua hàng
+        .product-item_action-heart
             i.heart-icon
-        .product__item--action-reload
+        .product-item__action--reload
             i.reload-icon

@@ -1,0 +1,22 @@
+.breadcrumb ol {
+    display: flex;
+    border-bottom: 1px dashed $clr-border-grey;
+    flex-wrap: wrap;
+    padding: 20px 15px; 
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.breadcrumb-item+.breadcrumb-item {
+    padding-left: .5rem;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    display: inline-block;
+    padding-right: .5rem;
+    content: ">";
+}
+
+li.breadcrumb-item, .breadcrumb-item a {
+    font-size: 13px;
+}

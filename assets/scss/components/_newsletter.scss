@@ -1,0 +1,68 @@
+.icon-close {
+    background: url('../images/close-icon.png') no-repeat;
+    display: block;
+    height: 31px;
+    width: 30px;
+}
+
+.newsletter {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    @include breakpoint(tablets-up) {
+        &:target {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+    .close {
+        margin-bottom: 30px;
+    }
+    &-container {
+        width: 60vh;
+        height: 60vh;
+        background: url('../images/newsletter-bg.png') #fff no-repeat center;
+        background-size: contain;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 50px;
+        .title {
+            text-transform: uppercase;
+            font-size: 20px;
+            color: $clr-black;
+        }
+        .description {
+            color: $clr-0-light;
+            font-size: 14px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .form-control {
+            border-radius: 45px;
+            border: 2px solid $clr-border-grey;
+            padding: 10px 15px;
+            color: $clr-black;
+            &::placeholder {
+                color: $clr-0-light;
+                font-size: 12px;
+            }
+        }
+        .btn-send {
+            text-align: center;
+            color: $clr-black;
+            text-decoration: underline;
+            text-transform: uppercase;
+            margin-top: 15px;
+        }
+    }
+}
