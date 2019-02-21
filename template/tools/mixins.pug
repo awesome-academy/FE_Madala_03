@@ -1,0 +1,94 @@
+//- Menu link
+
+//- promotion li
+mixin promotion(name, desc)
+    li
+        i.icon(class=name)
+        | #{desc}
+
+
+//- Submenu item
+mixin dropdown-item(data)
+    .dropdown-menu__item
+        h4.dropdown-menu__item-tag #{data.name}
+        ul.dropdown-menu__item-list
+            each i in data.items
+                li: a(href= i.link ) #{i.name}
+
+//- Line under title
+mixin title-line
+    .title-line
+        hr
+        .more-slash
+        hr
+
+//- Line under title white
+mixin title-line-w
+    .title-line-w
+        hr
+        .more-slash-w
+        hr
+
+mixin title-line-bl
+    .title-line-bl
+        hr
+        .more-slash-bl
+        hr
+
+//- Categorie
+mixin cate(data)
+    each i in data
+        a.label(href= i.link) #{i.name}
+
+//- Product item - at home page
+mixin product-item-home(img, branch, name, price_n, price_o)
+    .product__item
+        .product__item__img
+            img(src=img)
+        .product__item__branch #{branch}
+        a(href="/detail.html").product__item__name #{name}
+        hr.hr-name
+        .product__item__price
+            span.product__item__price--new(data-end='đ') #{price_n}
+            span.product__item__price--old(data-end='đ') #{price_o}
+        .product__item--action
+            a.product__item--action-buy(href='/cart.html') Mua hàng
+            .product__item--action-heart
+                i.heart-icon
+            .product__item--action-reload
+                i.reload-icon
+
+//- Product item
+mixin product-item
+    .item
+        img.image(src='../images/t-co9.jpg')
+        .name-price-more
+            .name Mỹ phẩm châu âu
+            .more
+                span.heart
+                    i.icon.heart-icon-bl
+                    i.icon.heart-icon-bl
+                    i.icon.heart-icon-bl
+                    i.icon.heart-icon-bl
+                    i.icon.heart-icon-bl
+                span (4 Lượt mua)
+            .price 355.000đ
+
+//- New post item 
+mixin new-post-item(img)
+    .item
+        img(src=img)
+        .date-by
+            .date
+                span.day 11
+                span /Tháng 5
+            span.by Đăng bởi Glagle
+
+//- Action behavior
+mixin action-behavior
+    .product__item--action
+        a.product__item--action-buy(href='/cart.html') Mua hàng
+        .product__item--action-heart
+            i.heart-icon
+        .product__item--action-reload
+            i.reload-icon
