@@ -1,0 +1,30 @@
+@mixin breakpoint($size) {
+    @if $size==laptops-desktops {
+        /* 
+            ##Device = Laptops, Desktops
+            ##Screen = B/w 1025px to 1280px
+        */
+        @media (min-width: 1025px) {
+            @content;
+        }
+    }
+    @else if $size==tablets-up {
+        /* 
+            ## From tablets up to
+        */
+        @media (min-width: 768px) {
+            @content;
+        }
+    }
+    @else if $size==tablets-ipads-p {
+        /* 
+            ##Device = Tablets, Ipads (portrait)
+            ##Screen = B/w 768px to 1024px
+        */
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            @content;
+        }
+
+    }
+}

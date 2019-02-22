@@ -1,0 +1,17 @@
+include ../tools/mixins
+include ../config
+block config
+
+doctype
+html(lang= lang)
+  head
+    title= title
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1")
+    link(rel='stylesheet', href= path + 'css/main.css')
+    block head_end
+	
+  body
+    block content
+		
+    block body_end
