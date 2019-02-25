@@ -1,0 +1,117 @@
+.container
+    .content-container.product-detail
+        .row
+            .product-image.col-md-6
+                .image-galery
+                    a(href='#'): i.icon.above-arrow
+                    a(href='#'): img(src='../images/t-co1.jpg')
+                    a(href='#'): img(src='../images/t-co2.jpg')
+                    a(href='#'): img(src='../images/t-co3.jpg')
+                    a(href='#'): img(src='../images/t-co4.jpg')
+                    a(href='#'): i.icon.below-arrow
+
+                .preview-image
+                    img(src='../images/t-co.jpg')
+
+            .product-summary.col-md-5.col-md-push-1
+                h2.name Lắc tay Tyffany xu hướng mói nhất
+                .type Tyffany Ms 3201
+                .price 
+                    span.new 955.000đ
+                    span.old 999.000đ
+                p.description
+                    | Không thể phủ nhận, thời trang và phong cách chính là “tuyên ngôn”
+                    | không lời mạnh mẽ nhất của mỗi người phụ nữ. Do đó, việc mua sắm thời 
+                    | trang trở thành niềm vui, và có khi là nguồn cảm hứng vô tận để phái đẹp 
+                    | sống vui, sống đẹp hơn trong mắt nửa còn lại của thế giới. Để F5 tủ đồ 
+                    | của mình trước những xu hướng ngày một đa dạng hơn trong thế giới thời 
+                    | trang, nhiều chị em không ngần ngại chi tiêu “mạnh tay” để sở hữu
+                    | những món đồ yêu thích.
+                .optional
+                    .color
+                        label(for='color select') Màu sắc
+                        .select-wrapper
+                            select
+                                option(value='Màu bạc') Màu bạc
+                                option(value='Màu vàng') Màu vàng
+                                option(value='Màu đồng') Màu đồng
+                    .size
+                        label(for='size select') Size
+                        .select-wrapper
+                            select
+                                option(value='12') 12
+                                option(value='13') 13
+                                option(value='14') 14
+                    .quality
+                        label(for='size select') Số lượng
+                        input(type='text' placeholder='Nhập số lượng')
+                .action
+                    +action-behavior
+                .note
+                    span Shipping & 
+                    span.return Returns
+                .social-plugin
+                    img(src='../images/social-plugin.jpg')
+        .main.row
+            .tabs.col-md-9
+                ul.tabs-name.line-dashed-under
+                    li
+                        a(href='#dacdiemnoibat').active Đặc điểm nổi bật
+                    li
+                        a(href='#thongtinsanpham') Thông tin sản phẩm
+                    li
+                        a(href='#danhgia') Đánh giá
+                .tabs-content
+                    .product
+                        .name-description
+                            .title The mark of a legend
+                            p.description                       
+                                | Tự hào được ghi là năm mà Tiffany & Co là
+                                | thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với
+                                | qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp
+                                | đường cong và đường nét mượt mà.
+                        img(src='../images/t-co6.jpg')
+                    .product.right
+                        .name-description
+                            .title The mark of a legend
+                            p.description                       
+                                | Tự hào được ghi là năm mà Tiffany & Co là
+                                | thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với
+                                | qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp
+                                | đường cong và đường nét mượt mà.
+                        img.img-right(src='../images/t-co5.jpg')
+                    .product
+                        .name-description
+                            .title The mark of a legend
+                            p.description                       
+                                | Tự hào được ghi là năm mà Tiffany & Co là
+                                | thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với
+                                | qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp
+                                | đường cong và đường nét mượt mà.
+                        img(src='../images/t-co7.jpg')
+                    .product.right
+                        .name-description
+                            .title The mark of a legend
+                            p.description                       
+                                | Tự hào được ghi là năm mà Tiffany & Co là
+                                | thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với
+                                | qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp
+                                | đường cong và đường nét mượt mà.
+                        img.img-right(src='../images/t-co8.jpg')
+            .sidebar.col-md-3
+                .widget.best-seller
+                    h4.name Sản phẩm bán chạy
+                    .widget-content
+                        +product-item
+                        +product-item
+                        +product-item
+                .widget.popular-buying
+                    h4.name Sản phẩm mua nhiều
+                    .widget-content
+                        +product-item
+                        +product-item
+                        +product-item
+                        
+
+
+

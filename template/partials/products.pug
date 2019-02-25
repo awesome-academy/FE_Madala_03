@@ -1,0 +1,21 @@
+.products
+    .container.products-container
+        ul.product-tabs
+            li: a(href='#new') Sản phẩm mới
+            li: a.active(href='#hot') Sản phẩm bán chạy
+            li: a(href='#special') Sản phẩm đặc biệt
+        +title-line
+        .product-menu
+            ul
+                each item in menu_product_list
+                    li
+                        a(href= item.link) #{item.name}
+        
+        .product-list       
+            a.icon.previous-icon(href="#")     
+            +product-item-home('/images/ohui.jpg', 'Ohui', 'Mỹ phẩm châu Á', 350000, 440000)
+            +product-item-home('/images/home.jpg', 'Home', 'Mỹ phẩm châu Á', 350000, 440000)
+            +product-item-home('/images/deborah.jpg', 'Debora', 'Mỹ phẩm châu Á', 350000, 440000)
+            +product-item-home('/images/sarvon.jpg', 'Sarvon', 'Mỹ phẩm châu Á', 350000, 440000)
+            a.icon.next-icon(href="#")
+

@@ -1,0 +1,128 @@
+.other {
+    &::after {
+        content: '';
+        clear: both;
+        display: block;
+    }
+}
+h4.title-g {
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-align: center;
+    color: $clr-black;
+    font-size: 18px;
+    a {
+        color: $clr-black;
+        text-decoration: none;
+    }
+}
+
+.content-container {
+    padding: 20px 0;
+}
+
+.about {
+
+}
+
+.other .title {
+    color: $clr-black;
+    font-weight: bold;
+    padding: 10px 0;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.description {
+    color: darken($clr-0-light, 20);
+    font-size: 14px;
+    padding: 5px 0;
+}
+
+a.readmore {
+    margin-top: 15px;
+    color: $clr-grey;
+    font-size: 15px;
+    text-decoration: none;
+    &:hover {
+        color: lighten($clr-grey, 5);
+    }
+}
+
+.blog {
+    .author {
+        font-size: 14px;
+        color: $clr-0-light;
+        font-style: italic;
+        margin-bottom: 15px;
+    }
+    .optional {
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid $clr-0-light;
+        padding-top: 5px;
+        span, a {
+            color: $clr-0-light;
+            font-size: 14px;
+            margin: 0;
+        }
+    }
+    padding-bottom: 20px;
+}
+
+.email {
+    .content-container {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    input {
+        border: 1px solid $clr-grey;
+        padding: 10px 20px;
+        width: 100%;
+        &::placeholder {
+            color: $clr-0-light;
+            font-weight: bold;
+            font-size: 15px;
+        }
+    }
+    p {
+        text-align: center;
+        color: $clr-0-light;
+        font-size: 15px;
+        padding: 10px 0;
+    }
+    a.btn-send {
+        background: $clr-black;
+        color: $clr-light;
+        padding: 10px 30px;
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 14px;
+        &:hover {
+            background: lighten($clr-black, 20);
+        }
+    }
+}
+
+.tag {
+    a.label {
+        padding: 5px 8px;
+        border: 1px solid $clr-divider;
+        display: inline-block;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        text-decoration: none;
+        color: #000000;
+        font-size: 14px;
+        &:hover {
+            background: $clr-1;
+            color: $clr-light;
+            border-color: $clr-1;
+        }
+    }
+}

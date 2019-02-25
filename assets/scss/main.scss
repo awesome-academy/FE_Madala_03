@@ -1,7 +1,7 @@
 @charset 'UTF-8';
 @import "tools/mixins.scss";
-@import "tools/function";
 @import "tools/mq.scss";
+@import "tools/function";
 @import "settings";
 
 // =======================================
@@ -18,3 +18,30 @@
 @import "base/reset";
 @import "base/bootstrap-all.min";
 @import "base/global-setting";
+
+// =======================================
+// Components
+// =======================================
+@import "components/title-line";
+@import "components/breadcrumb";
+@import "components/category";
+@import "components/tag";
+@import "components/compare";
+@import "components/switch-pagination";
+@import "components/line_dashed_under";
+@import "components/newsletter";
+@import "components/ads";
+
+// =======================================
+// Include
+// =======================================
+@import "includes/header";
+@import "includes/navbar";
+@import "includes/slide";
+@import "includes/promotion";
+@import "includes/feature";
+@import "includes/feedback";
+@import "includes/products";
+@import "includes/social";
+@import "includes/other";
+@import "includes/footer";

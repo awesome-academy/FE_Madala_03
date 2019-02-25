@@ -1,0 +1,59 @@
+.footer
+    .footer-nav
+        .container
+            .row.clearfix
+                .col-md-4.about
+                    h4.title-f Liên hệ với chúng tôi
+                    .content-container
+                        .maker
+                            i.icon.maker-icon
+                            span
+                                | Tầng 4, Tòa nhà Hanoi Group  Số 442 Đội Cấn,
+                                | P. Cống Vị, Q. Ba Đình, Hà Nội
+                        .phone-fax
+                            .phone
+                                i.icon.phone-icon
+                                span (04) 6674 2332
+                            .fax
+                                i.icon.fax-icon 
+                                span (04) 3786 8904
+                        .phone-mail
+                            .phone
+                                i.icon.phone-icon
+                                span (08) 6680 9686
+                            .mail
+                                i.icon.mail-icon
+                                span Support@bizweb.vn            
+                .col-md-2.delivery
+                    h4.title-f Chuyển hàng
+                    .content-container
+                        ul
+                            each item in delivery_menu
+                                li
+                                    a(href= item.link) #{item.name}
+                .col-md-2.support
+                    h4.title-f Hỗ trợ
+                    .content-container
+                        ul
+                            each item in support_menu
+                                li
+                                    a(href= item.link) #{item.name}
+                .col-md-2.information
+                    h4.title-f Thông tin
+                    .content-container
+                        ul
+                            each item in info_menu
+                                li
+                                    a(href= item.link) #{item.name}
+                .col-md-2.myaccount
+                    h4.title-f My account
+                    .content-container
+                        ul
+                            each item in account_menu
+                                li
+                                    a(href= item.link) #{item.name}
+    .copyright
+        .container
+            .row            
+                p &copy; Copyright 2008-2014 DKT Technology JSC
+                img(src='./images/purchase_branch.png')

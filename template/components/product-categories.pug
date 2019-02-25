@@ -1,0 +1,49 @@
+.category
+    .title.line-dashed-under
+        i.icon.icon-burger-bl
+        span Danh mục sản phẩm
+    ul.nav
+        li
+            a(href='#menu1') Mỹ phẩm
+            ul.nav-sub#menu1
+                - 
+                    var
+                        mypham = [
+                            {
+                                name='Dưỡng da',
+                                link='#'
+                            },
+                            {
+                                name='Dưỡng môi',
+                                link='#'
+                            },
+                            {
+                                name='Dưỡng chân',
+                                link='#'
+                            },
+                            {
+                                name='Dưỡng tay',
+                                link='#'
+                            }
+                        ]
+                each sub in mypham
+                    li
+                        a(href= sub.link) #{sub.name}
+        li
+            a(href='#menu2') Trang sức
+            ul.nav-sub#menu2
+                each sub in mypham
+                    li
+                        a(href= sub.link) #{sub.name}
+        li
+            a(href='#menu3') Phụ kiện
+            ul.nav-sub#menu3
+                each sub in mypham
+                    li
+                        a(href= sub.link) #{sub.name}
+        li
+            a(href='#menu4') Nước hoa
+            ul.nav-sub#menu4
+                each sub in mypham
+                    li
+                        a(href= sub.link) #{sub.name}

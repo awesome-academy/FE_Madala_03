@@ -1,0 +1,6 @@
+.ads {
+    display: none;
+    @include breakpoint(laptops-desktops) {
+        display: block;
+    }
+}

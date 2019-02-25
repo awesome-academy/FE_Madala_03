@@ -2,17 +2,6 @@
 //   Variables
 //----------------------------------------
 
-// 1  - Color
-// 2  - Font
-// 3  - Grid and wrapper
-// 4  - Radius
-// 5  - Forms
-// 6  - Spacing
-// 7  - Breakpoints
-// 8  - MediaQueries
-// 9  - Transitions
-// 10 - Inputs
-
 //
 // 1 - Color
 // ---------------------------------------
@@ -22,33 +11,36 @@ $clr-success: #61bcbd;
 $clr-warning: #f9b134;
 $clr-notice: #d9edf7;
 $clr-error: #d24a53;
-$clr-divider: #ededed;
+$clr-divider: #dadada;
 
+$clr-grey: #c1c1c1;
+$clr-border-grey: #dcdcdc;
+
+$clr-slide-bg: #f1f1f1;
+$clr-slide-desc: #6c3c33;
+
+$clr-black: #050505;
 $clr-0-darker: #23292e;
 $clr-0-dark: #212121;
 $clr-0: #333;
-$clr-0-light: #ccc;
+$clr-0-light: #a9a8a8;
 $clr-0-lighter: #fafafa;
 
 $clr-1: #789629;
-$clr-1-light: tint($clr-1, 50%);
+$clr-1-light: tint($clr-1, 20%);
+
 $clr-1-lighter: tint($clr-1, 85%);
 $clr-1-dark: shade($clr-1, 15%);
 $clr-1-darker: shade($clr-1, 30%);
 
-$clr-2: #605ce8;
+
+$clr-2: #88d8da;
+
 $clr-2-light: tint($clr-2, 50%);
 $clr-2-lighter: tint($clr-2, 85%);
 $clr-2-dark: shade($clr-2, 15%);
 $clr-2-darker: shade($clr-2, 30%);
 
-// Social color
-$clr-facebook: #3b5998;
-$clr-twitter: #55acee;
-$clr-linkedin: #0077b5;
-$clr-instagram: #3f729b;
-$clr-youtube: #cd201f;
-$clr-pinterest: #bd081c;
 
 //
 // 2 - Font
@@ -56,6 +48,9 @@ $clr-pinterest: #bd081c;
 
 $font-base: 'Open Sans', sans-serif;
 $font-size-base: 1.6rem;
+
+$font-special-1: 'Lobster', cursive;
+
 // Don't touch this, it's for em convertion
 $em-base: strip-units($font-size-base) * 10;
 $font-weight-bold: bold;
@@ -113,60 +108,9 @@ $form-list-input: _assign(
 );
 
 //
-// 6 - Spacing
-// ---------------------------------------
-
-$spacer-N: 0;
-$spacer-S: 1rem;
-$spacer-M: 2rem;
-$spacer-L: 4rem;
-$spacer-XL: 8rem;
-
-//
-// 7 - Breakpoints
-// ---------------------------------------
-
-$mq-S: em(480, $em-base);
-$mq-S-up: em(481, $em-base);
-$mq-M: em(768, $em-base);
-$mq-M-up: em(769, $em-base);
-$mq-L: em(1024, $em-base);
-$mq-L-up: em(1025, $em-base);
-
-//
-// 8 - MediaQueries
-// ---------------------------------------
-
-$mobile: (
-  max-width: $mq-S,
-);
-$mobileUp: (
-  min-width: $mq-S-up,
-);
-$tablet: (
-  max-width: $mq-M,
-);
-$tabletUp: (
-  min-width: $mq-M-up,
-);
-$desktop: (
-  max-width: $mq-L,
-);
-$desktopUp: (
-  min-width: $mq-L-up,
-);
-
-//
 // 9 - Transitions
 // ---------------------------------------
 
 $trans-timing: 0.3s;
 $trans-cubic: cubic-bezier(0.455, 0.03, 0.515, 0.955);
 $trans-all: all $trans-timing $trans-cubic;
-
-//
-// 10 - inputs
-// ---------------------------------------
-
-$radioCheckboxSize: 1.6rem;
-$radioCheckboxTop: 0.2rem;
