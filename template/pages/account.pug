@@ -1,0 +1,12 @@
+extends ../layouts/summary
+append config
+    - var title = "Tài khoản"
+    - var metaDesc = "Chi tiết"
+block head_end
+
+block content
+    include ../partials/navbar
+    include ../components/breadcrumb
+    include ../partials/account
+    include ../partials/footer
+block body_end

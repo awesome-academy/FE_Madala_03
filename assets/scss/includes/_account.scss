@@ -1,0 +1,70 @@
+@mixin icon($img, $w, $h) {
+    background: url($img) no-repeat;
+    width: $w+px;
+    height: $h+px;
+    display: inline-block;
+}
+.icon-user {
+    @include icon('../images/user-icon.png', 13, 15);
+}
+.icon-marker {
+    @include icon('../images/marker-icon.png', 16, 15);
+}
+.icon-phone {
+    @include icon('../images/phone-icon.png', 16, 16);
+}
+.account {
+    &-transaction {
+        table {
+            width: 100%;
+            th {
+                background: $lighter;
+                color: $black;
+                text-transform: uppercase;
+                border: 1px solid $divider;
+                font-weight: bold;
+                font-size: ($fz-standard)-1;
+                padding: 1rem .75rem;
+            }
+            td {
+                border: 1px solid $border-grey;
+                
+            }
+            td, th {
+                padding: .85rem;
+                text-align: center;
+            }
+            .pay {
+                color: darken($error, 20);
+            }
+        }
+    }
+    &-detail {
+        .title {
+            font-size: ($fz-standard)-1;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 1px solid $border-grey;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        .name, .address, .phone {
+            display: flex;
+            margin-bottom: 15px;
+            .icon {
+                margin-right: 10px;
+                margin-top: 6px;
+            }
+        }
+        .name {
+            &-content {
+                display: flex;
+                flex-direction: column;
+                .user-name {
+                    font-size: $fz-medium;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
