@@ -1,0 +1,11 @@
+extends ../layouts/summary
+append config
+    - var title = "Liên hệ"
+    - var metaDesc = "Gửi cho chúng tôi"
+block head_end
+block content
+    include ../partials/navbar
+    include ../components/breadcrumb
+    include ../partials/contact
+    include ../partials/footer
+block body_end
