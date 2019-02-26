@@ -1,0 +1,57 @@
+.container
+    .container-content.blog-detail
+        .row
+            h3.title Blog
+            .sidebar.col-md-3
+                .widget.new-post-widget
+                    h4.name Bài viết mới nhất
+                    .widget-content
+                        +new-post-item('../images/new-post-1.png')
+                        +new-post-item('../images/new-post-2.png')
+                        +new-post-item('../images/new-post-3.png')
+                .widget.blog-tag-widget.tag
+                    h4.name Blog tags
+                    .widget-content.content
+                        each item in tags
+                            a(href= item.link) #{item.name}
+                .widget.lastest-video-widget
+                    h4.name Lastest Video
+                    .widget-content
+                        img(src='../images/video.png')
+            .main.col-md-9
+                .post-detail
+                    img(src='../images/blog_image_post.png')
+                    h2.title Nàng béo không ngại diện váy áo nổi bật
+                    hr.line-across
+                    p.description
+                        | Hi, chào các nàng ... sau khá nhiều lời hứa hão thì hôm nay tớ quay
+                        | lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân
+                        | tình xô nhau đi tắm Free để giải nhiệt.Trong tiết xuân hè, nàng ngoại
+                        | cỡ thắp sáng phong cách bằng quần họa tiết nhiệt đới đi kèm áo sơ mi 
+                        | nhã nhặn.Trang phục họa tiết điện tử được nàng phối cùng chân váy kẻ 
+                        | caro, làm nên style vừa hiện đại, vừa phảng phất nét cổ điển.Lối diện 
+                        | đồ hàng ngày đơn giản, khỏe khoắn của cô khi kết hợp chất liệu jean.Nữ
+                        | blogger rực rỡ khi hòa trộn các gam đỏ, hồng, tím... một cách vui
+                        | tươi, kèm theo các phụ kiện điệu đà. 
+                    .more-info.line-dashed-under
+                        span.by Bởi NamTran 
+                        span.date (27/05/2015)
+                    .option
+                        span.readmore
+                            a(href='/blog_detail.html') Đọc thêm
+                        span.times-comment 23 Bình luận
+                    .blog-tag.line-dashed-under
+                        span Tag: 
+                        a(href='#') Men
+                .feedback-form
+                    h5.name Đóng góp ý kiến
+                    .form-content
+                        .form-group
+                            label(for='name') Tên *
+                            input.form-control(type='text')
+                        .form-group
+                            label(for='email') Email *
+                            input.form-control(type='email')
+                        .form-group
+                            label(for='detail') Ý kiến *
+                            textarea.form-control(type='text')
