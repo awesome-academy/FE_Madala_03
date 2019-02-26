@@ -1,0 +1,37 @@
+.register {
+    padding: 10px 0;
+    .register-title {
+        padding: 10px 0;
+        h3 {
+            font-size: ($fz-medium)+2;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.register-container {
+    background: $light;
+    padding: 30px 50px;
+}
+
+.form .option {
+    margin-top: 10px;
+    display: flex;
+}
+
+.icon-back {
+    background: url('../images/back_icon.png') no-repeat;
+    width: 12px;
+    height: 11px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.register-container {
+    .option {
+        justify-content: space-between;
+        .btn-back {
+            text-decoration: none;
+        }
+    }
+}
