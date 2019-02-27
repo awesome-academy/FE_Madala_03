@@ -1,0 +1,231 @@
+@mixin icon($img) {
+    background: url($img) no-repeat;
+    width: 13px;
+    height: 19px;
+    display: inline-block;
+}
+.above-arrow {
+    @include icon('../images/above_arrow.png');
+}
+
+.below-arrow {
+    @include icon('../images/below_arrow.png');
+}
+
+.heart-icon-bl {
+    background: url('../images/heart_icon_bl.png') no-repeat;
+    width: 15px;
+    height: 14px;
+    display: inline-block;
+    margin-right: 1.5px;
+}
+
+.product-detail {
+    padding: 30px 10px;
+    display: inline-block;
+    .product-image {
+        display: flex;
+        padding: 30px 0;
+        .image-galery {
+            flex: 1;
+            text-align: center;
+            a {
+                display: block;
+            }
+        }
+        .preview-image {
+            border: 1px solid $divider;
+            flex: 3;
+        }
+    }
+    .product-summary {
+        padding-bottom: 20px;
+        .name {
+            text-transform: uppercase;
+            color: $light;
+            font-weight: bold;
+            font-size: ($fz-medium) + 2;
+        }
+        .type {
+            text-transform: uppercase;
+            font-size: $fz-standard;
+            color: $light;
+        }
+        .price {
+            padding: 10px 0;
+            font-family: $font-special-1;
+            .new {
+                color: $black;
+                font-size: $fz-large;
+            }
+            .old {
+                padding-left: 10px;
+                color: $light;
+                font-size: $fz-medium;
+            }
+        }
+        .description {
+            color: $light;
+            font-size: ($fz-small)+1;
+            line-height: $line-height-XL;
+            padding-bottom: 20px;
+        }
+        .optional {
+            label {
+                font-size: ($fz-small)+1;
+                text-transform: uppercase;
+                color: $black;
+                padding-bottom: 8px;
+            }
+            select,
+            input {
+                width: 100%;
+                @include breakpoint(tablets-ipads-p) {
+                    width: 50%;
+                }
+                border: 1px solid $grey;
+                padding: 10px 15px;
+                option {
+                    font-size: ($fz-small)+1;
+                }
+            }
+            select::-ms-expand {
+                display: none;
+            }
+            .select-wrapper {
+                position: relative;
+            }
+            .select-wrapper:before {
+                content: '';
+                position: absolute;
+                right: 20px;
+                top: 15px;
+                pointer-events: none;
+                background: url('../images/select_icon.png') no-repeat;
+                width: 5px;
+                height: 10px;
+                display: inline-block;
+            }
+            .color, .size, .quality {
+                padding-bottom: 20px;
+            }
+        }
+        .action {
+            .product__item--action {
+                justify-content: flex-start;
+            }
+        }
+        .note {
+            padding: 20px 0;
+            font-size: 13px;
+            color: darken($light, 20);
+            .return {
+                color: $red;
+            }
+        }
+    }
+    .main {
+        .tabs {
+            ul.tabs-name {
+                display: flex;
+                list-style: none;
+                text-transform: uppercase;
+                li {
+                    a {
+                        color: $grey;
+                        text-decoration: none;
+                        font-weight: bold;
+                    }
+                    .active {
+                        color: $black;
+                    }
+                }
+                li+li {
+                    padding-left: 15px;
+                }
+            }
+            &-content {
+                padding: 10px 0;
+                .product {
+                    padding: 20px 0;
+                    display: flex;
+                    flex-direction: column-reverse;
+                    width: 80%;
+                    .name-description {
+                        .title {
+                            font-size: ($fz-standard)-1;
+                            text-transform: uppercase;
+                            display: inline-block;
+                            &::after {
+                                content: '';
+                                border-bottom: 1px solid $divider;
+                                width: 45%;
+                                display: block;
+                            }
+                        }
+                        .description {
+                            padding-top: 5px;
+                            font-size: ($fz-small)+1;
+                        }
+                    }
+                    img {
+                        align-self: self-start;
+                        float: left;
+                    }
+                    .img-right {
+                        margin-left: auto;
+                    }
+                    &::after {
+                        @include clearfix;
+                    }
+                }
+                .right {
+                    margin-left: auto;
+                    float: right;
+                    text-align: right;
+                }
+            }
+            &::after {
+                @include clearfix;
+            }
+        }
+        .sidebar {
+            display: none;
+            @include breakpoint(laptops-desktops) {
+                display: block;
+            }
+            .best-seller,
+            .popular-buying {
+                .item {
+                    display: flex;
+                    padding-top: 15px;
+                    .image {
+                        flex: 1;
+                    }
+                    .name-price-more {
+                        padding-left: 5px;
+                        flex: 2;
+                        .name {
+                            font-size: ($fz-standard)-1;
+                            font-weight: bold;
+                        }
+                        .more {
+                            padding: 5px 0;
+                            display: flex;
+                            span {
+                                font-size: ($fz-small)-2;
+                            }
+                        }
+                        .price {
+                            font-weight: bold;
+                            font-size: ($fz-standard)-1;
+                        }
+                    }
+                    &:nth-child(n+2) {
+                        border-top: 1px dashed $divider;
+                    }
+                }
+            }
+        }
+    }
+}
