@@ -1,0 +1,21 @@
+.error-page
+    .container
+            img(src='../images/404.png')
+            p.description Đây không phải là trang web bạn đang tìm kiếm
+            input(type='text' class='search')
+            ul.menu
+                -
+                    var
+                        menu = [
+                            {
+                                link: '/contact.html',
+                                name: 'Liên hệ'
+                            },
+                            {
+                                link: '/home.html',
+                                name: 'Trang chủ'
+                            }
+                        ]
+                each i in menu
+                    li
+                        a(href=i.link) #{i.name}

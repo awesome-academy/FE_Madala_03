@@ -11,9 +11,9 @@
 .form-group {
     margin-bottom: 2px;
     label {
-        color: #000000;
+        color: $black;
         font-weight: bold;
-        font-size: 12px;
+        font-size: $fz-small;
         padding-bottom: 5px;
     }
 }
@@ -22,17 +22,17 @@
     display: block;
     width: 100%;
     padding: .475rem .75rem;
-    font-size: 1rem;
+    font-size: $fz-small;
     line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    border: 1px solid #e7e7e7
+    color: $dark2;
+    background-color: $white;
+    border: 1px solid $divider;
 }
 
 .form .summary {
     margin-bottom: 30px;
     .title {
-        font-size: 16px;
+        font-size: ($fz-standard)+1;
         text-transform: uppercase;
     }
 }
@@ -44,12 +44,12 @@
 
 .btn-primary {
     display: block;
-    background: #000000;
-    color: #c2c2c2;
+    background: $black;
+    color: $lighter;
     padding: 5px 15px;
     text-transform: uppercase;
     &:hover {
-        background: lighten(#000000, 20);
+        background: lighten($black, 20);
     }
 }
 
@@ -58,13 +58,13 @@
 .container-title {
     padding: 10px 0;
     h3 {
-        font-size: 20px;
+        font-size: ($fz-medium)+2;
         text-transform: uppercase;
     }
 }
 
 hr.line-across {
-    border-top: 1px solid #e6e6e6;
+    border-top: 1px solid $divider;
 }
 
 .row {

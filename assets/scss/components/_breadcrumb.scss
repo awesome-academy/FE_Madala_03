@@ -1,6 +1,6 @@
 .breadcrumb ol {
     display: flex;
-    border-bottom: 1px dashed $clr-border-grey;
+    border-bottom: 1px dashed $border-grey;
     flex-wrap: wrap;
     padding: 20px 15px; 
     list-style: none;
@@ -18,5 +18,5 @@
 }
 
 li.breadcrumb-item, .breadcrumb-item a {
-    font-size: 13px;
+    font-size: ($fz-standard)-2;
 }

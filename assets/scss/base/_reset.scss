@@ -27,8 +27,8 @@
     font-weight: $font-weight-base;
     line-height: $line-height-M;
     text-rendering: optimizeLegibility;
-    color: $clr-0-darker;
-    background: $clr-light;
+    color: $darker;
+    background: $white;
     overflow-x: hidden;
     overflow-y: scroll;
     -ms-text-size-adjust: 100%;
@@ -95,13 +95,13 @@
   
   a {
     text-decoration: none;
-    color: $clr-1;
+    color: $primary;
     transition: color $trans-timing $trans-cubic;
   
     &:active,
     &:hover,
     &:focus {
-      color: $clr-1-light;
+      color: $primary-light;
     }
   }
   
@@ -209,7 +209,7 @@
   }
   
   ::placeholder {
-    color: $clr-0-light;
+    color: $light;
   }
   
   /**
@@ -239,6 +239,6 @@
   
   hr {
     border: 0;
-    border-top: 1px solid $clr-0-dark;
+    border-top: 1px solid $dark;
     margin: 2rem 0;
   }

@@ -50,7 +50,7 @@
 
 .player--round {
     position: absolute;
-    background: #6d6d6d;
+    background: darken($light, 20);
     padding: 30px;
     border-radius: 50%;
     margin: auto;
@@ -64,7 +64,7 @@
     cursor: pointer;
     transition: all .5s;
     &:hover {
-        background: lighten($color: #6d6d6d, $amount: 20)
+        background: lighten($color: $light, $amount: 10)
     }
 }
 
@@ -75,52 +75,52 @@
     display: inline-block;
 }
 .bg-yellow {
-    background: #e3ce33;
+    background: $gel;
 }
 
 .bg-grey {
-    background: #cbd3df;
+    background: $light;
 }
 
 .bg-ligt-blue {
-    background: #88d8da;
+    background: $jewelry;
 }
 
 .box-gel {
     @include box;
     .name {
         text-transform: uppercase;
-        color: #ffffff;
-        font-size: 28px;
+        color: $lighter;
+        font-size: $fz-feature;
         font-family: 'RobotoSlab Light';
     }
     &:before {
-        @include arrow('left', 'right', #e3ce33);
+        @include arrow('left', 'right', $gel);
     }
 }
 
 .box-perfume {
     @include box;
     .name {
-        color: #000000;
+        color: $black;
         text-transform: uppercase;
-        font-size: 28px;
+        font-size: $fz-feature;
         font-family: 'RobotoSlab Light';
     }
     &:before {
-        @include arrow('right', 'left', #cbd3df);
+        @include arrow('right', 'left', $perfume);
     }
 }
 
 .box-jewelry {
     @include box;
     .name {
-        color: $clr-0-dark;
+        color: $dark;
         text-transform: uppercase;
-        font-size: 28px;
+        font-size: $fz-feature;
         font-family: 'RobotoSlab Light';
     }
     &:before {
-        @include arrow('right', 'left', $clr-2);
+        @include arrow('right', 'left', $jewelry);
     }
 }

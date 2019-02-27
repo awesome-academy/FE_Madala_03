@@ -1,0 +1,71 @@
+.blog-list {
+    padding: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blog-item {
+    margin-bottom: 30px;
+    @include breakpoint(tablets-ipads-p) {
+        @include grid(2, 1%);
+    }
+    @include breakpoint(laptops-desktops) {
+        @include grid(3, 1%);
+    }
+    img {
+        width: 100%;
+    }
+    .title {
+        font-size: ($fz-standard)+3;
+        text-transform: uppercase;
+        font-weight: bold;
+        a {
+            color: $black;
+            text-decoration: none;
+            &:hover {
+                color: darken($primary, 20);
+            }
+        }
+    }
+    .description {
+        color: darken($grey, 30);
+        padding: 10px 0;
+    }
+
+}
+
+.more-info {
+    font-size: $fz-standard;
+    font-style: italic;
+    color: $grey;
+    padding-bottom: 15px;
+    span+span {
+        padding-left: 10px;
+    }
+}
+.option {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+    .readmore {
+        a {
+            color: $grey;
+            text-decoration: none;
+            &:hover {
+                color: darken($primary, 20);
+            }
+        }
+        &::after {
+            content: '';
+            background: url('../images/read-more.png') no-repeat;
+            width: 4px;
+            height: 8px;
+            display: inline-block;
+            margin-left: 5px;
+        }
+    }
+    span {
+        color: $grey;
+        font-size: $fz-standard;
+    }
+} 

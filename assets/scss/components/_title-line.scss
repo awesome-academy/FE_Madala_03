@@ -1,5 +1,5 @@
 .title-line {
-    @include title-line($clr-divider);
+    @include title-line($divider);
 }
 
 .more-slash {
@@ -7,7 +7,7 @@
 }
 
 .title-line-w {
-    @include title-line($clr-light);
+    @include title-line($light);
 }
 
 .more-slash-w {
@@ -15,7 +15,7 @@
 }
 
 .title-line-bl {
-    @include title-line($clr-black);
+    @include title-line($black);
 }
 
 .more-slash-bl {

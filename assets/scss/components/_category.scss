@@ -16,7 +16,7 @@
 .category .title {
     display: flex;
     align-items: center;
-    font-size: 18px;
+    font-size: $fz-medium;
     span {
         text-transform: uppercase;
         font-weight: bold;
@@ -26,16 +26,16 @@
 .category .nav {
     list-style: none;
     >li {
-        border-bottom: 1px dashed $clr-border-grey;
+        border-bottom: 1px dashed $border-grey;
         padding: 5px 0;
         position: relative;
     }
     >li>a {
         text-transform: uppercase;
-        color: $clr-black;
+        color: $black;
         text-decoration: none;
         &:hover {
-            color: $clr-1;
+            color: $primary;
         }
         &:after {
             content: '';
@@ -56,10 +56,10 @@
         li {
             padding: 3px 0;
             a {
-                color: $clr-0-light;
+                color: $light;
                 text-decoration: none;
                 &:hover {
-                    color: $clr-1;
+                    color: $primary;
                 }
             }
         }

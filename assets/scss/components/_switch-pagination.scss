@@ -12,17 +12,19 @@
     display: inline-block;
 }
 
-.icon-previous-page {
-    background: url('../images/previous_page_icon.png') no-repeat;
+@mixin size-icon {
     width: 5px;
     height: 9px;
+}
+.icon-previous-page {
+    background: url('../images/previous_page_icon.png') no-repeat;
+    @include size-icon;
     display: inline-block;
 }
 
 .icon-next-page {
     background: url('../images/next_page_icon.png') no-repeat;
-    width: 5px;
-    height: 9px;
+    @include size-icon;
     display: inline-block;
 }
 
@@ -45,15 +47,15 @@
     list-style: none;
     display: flex;
     li {
-        font-size: 14px;
+        font-size: ($fz-standard)-1;
         a {
             text-decoration: none;
         }
         .normal {
-            color: $clr-0-light;
+            color: $light;
         }
         .current {
-            color: $clr-black;
+            color: $black;
         }
     }
     li+li {

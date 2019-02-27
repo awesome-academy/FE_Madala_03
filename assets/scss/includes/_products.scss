@@ -16,8 +16,8 @@
 
 .products {
     background: url('../images/bg_product.jpg');
-    border-bottom: 1px solid $clr-divider;
-    border-top: 1px solid $clr-divider;
+    border-bottom: 1px solid $divider;
+    border-top: 1px solid $divider;
 }
 
 .products-container {
@@ -39,14 +39,14 @@ ul.product-tabs {
     li {
         font-family: $font-special-1;
         a {
-            color: $clr-grey;
-            font-size: 20px;
+            color: $grey;
+            font-size: ($fz-medium) + 2;
             text-decoration: none;
         }
     }
     .active {
-        color: $clr-1;
-        font-size: 30px;
+        color: $primary;
+        font-size: $fz-large;
         font-weight: bold;
     }
 }
@@ -75,15 +75,15 @@ ul.product-tabs {
         }
         list-style-type: unset;
         a {
-            color: $clr-0-light;
+            color: $light;
             text-decoration: none;
             @include breakpoint(tablets-up) {
-                font-size: 14px;
+                font-size: ($fz-standard)-1;
             }
         }
         &:hover,
         &:hover a {
-            color: $clr-1-light;
+            color: $primary-light;
         }
     }
 }
@@ -113,7 +113,7 @@ ul.product-tabs {
 .product-item {
     padding: 20px 0;
     margin-bottom: 10px;
-    background: $clr-light;
+    background: $white;
     text-align: center;
     @include breakpoint(tablets-ipads-p) {
         @include grid(2, 2%);
@@ -124,11 +124,11 @@ ul.product-tabs {
         height: 420px;
     }
     &__img {
-        border-bottom: 1.5px dashed $clr-divider;
+        border-bottom: 1.5px dashed $divider;
     }
     &__branch {
         margin-top: 20px;
-        color: $clr-grey;
+        color: $grey;
         text-transform: uppercase;
         font-weight: bold;
         padding: 10px 0;
@@ -137,18 +137,18 @@ ul.product-tabs {
         text-decoration: none;
     }
     &__name {
-        color: $clr-0-dark;
+        color: $dark;
         font-weight: bold;
-        font-size: 18px;
+        font-size: $fz-medium;
         padding-bottom: 10px;
     }
     &__price {
         padding-top: 10px;
         padding-bottom: 10px;
-        font-size: 18px;
+        font-size: $fz-medium;
         font-family: $font-special-1;
         &--new {
-            color: $clr-1;
+            color: $primary;
             font-weight: bold;
             margin-right: 5px;
         }
@@ -159,13 +159,13 @@ ul.product-tabs {
             font-size: smaller;
         }
         &--old {
-            color: $clr-grey;
+            color: $grey;
         }
     }
     .hr-name {
         margin: 0 auto;
         width: 15%;
-        border-top: 1.2px solid $clr-0-light;
+        border-top: 1.2px solid $light;
     }
     &__action {
         display: flex;
@@ -176,43 +176,45 @@ ul.product-tabs {
         }
         &--buy {
             padding: 10px 10px;
-            border: 3px solid $clr-0-light;
+            border: 3px solid $light;
             border-radius: 10px;
             cursor: pointer;
             text-transform: uppercase;
-            color: #000000;
-            font-size: 13px;
+            color: $black;
+            font-size: ($fz-small) +1;
             font-weight: bold;
             &:hover {
-                border-color: darken($clr-0-light, 40);
+                border-color: darken($light, 40);
             }
         }
-        &--heart {
-            background: $clr-1;
-            border-radius: 30%;
+        @mixin size-icon {
             height: 45px;
             width: 45px;
+        }
+        &--heart {
+            background: $primary;
+            border-radius: 30%;
+            @include size-icon;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 10px;
             cursor: pointer;
             &:hover {
-                background: lighten($color: $clr-1, $amount: 20);
+                background: lighten($color: $primary, $amount: 20);
             }
         }
         &--reload {
-            background: $clr-light;
-            border: 3px solid $clr-0-light;
+            background: $light;
+            border: 3px solid $light;
             border-radius: 30%;
-            height: 45px;
-            width: 45px;
+            @include size-icon;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             &:hover {
-                border-color: darken($clr-0-light, 40);
+                border-color: darken($light, 40);
             }
         }
     }
@@ -221,14 +223,16 @@ ul.product-tabs {
     }
 }
 
-.heart-icon {
-    background: url('../images/heart_icon.png') no-repeat;
+@mixin size-icon {
     height: 12px;
     width: 12px;
+}
+.heart-icon {
+    background: url('../images/heart_icon.png') no-repeat;
+    @include size-icon;
 }
 
 .reload-icon {
     background: url('../images/reload_icon.png') no-repeat;
-    height: 12px;
-    width: 12px;
+    @include size-icon;
 }

@@ -21,12 +21,12 @@
   
   // Mixes a color with black
   @function shade($color, $percent) {
-    @return mix($clr-black, $color, $percent);
+    @return mix($black, $color, $percent);
   }
   
   // Mixes a color with white.
   @function tint($color, $percent) {
-    @return mix($clr-light, $color, $percent);
+    @return mix($light, $color, $percent);
   }
   
   /// Append pseudo-classes to a selector(s).
