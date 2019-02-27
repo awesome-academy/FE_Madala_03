@@ -5,7 +5,7 @@
         @include title-part;
     }
     p {
-        font-size: 14px;
-        color: $clr-grey;
+        font-size: ($fz-standard)-1;
+        color: $grey;
     }
 }

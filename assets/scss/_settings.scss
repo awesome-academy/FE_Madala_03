@@ -6,41 +6,39 @@
 // 1 - Color
 // ---------------------------------------
 
-$clr-light: #fff;
-$clr-success: #61bcbd;
-$clr-warning: #f9b134;
-$clr-notice: #d9edf7;
-$clr-error: #d24a53;
-$clr-divider: #dadada;
+$light: #fff;
+$success: #61bcbd;
+$warning: #f9b134;
+$notice: #d9edf7;
+$error: #d24a53;
+$divider: #dadada;
 
-$clr-grey: #c1c1c1;
-$clr-border-grey: #dcdcdc;
+$border-grey: #dcdcdc;
 
-$clr-slide-bg: #f1f1f1;
-$clr-slide-desc: #6c3c33;
+$slide-bg: #f1f1f1;
+$slide-desc: #6c3c33;
 
-$clr-black: #050505;
-$clr-0-darker: #23292e;
-$clr-0-dark: #212121;
-$clr-0: #333;
-$clr-0-light: #a9a8a8;
-$clr-0-lighter: #fafafa;
+$black: #050505;
+$darker: #23292e;
+$dark: #212121;
+$dark2: #333;
+$light: #a9a8a8;
+$lighter: #fafafa;
 
-$clr-1: #789629;
-$clr-1-light: tint($clr-1, 20%);
+$primary: #789629;
+$primary-light: tint($primary, 20%);
 
-$clr-1-lighter: tint($clr-1, 85%);
-$clr-1-dark: shade($clr-1, 15%);
-$clr-1-darker: shade($clr-1, 30%);
+$primary-lighter: tint($primary, 85%);
+$primary-dark: shade($primary, 15%);
+$primary-darker: shade($primary, 30%);
 
 
-$clr-2: #88d8da;
-
-$clr-2-light: tint($clr-2, 50%);
-$clr-2-lighter: tint($clr-2, 85%);
-$clr-2-dark: shade($clr-2, 15%);
-$clr-2-darker: shade($clr-2, 30%);
-
+$jewelry: #88d8da;
+$gel: #e3ce33;
+$black: #000000;
+$perfume: #cbd3df;
+$grey: #c1c1c1;
+$white: #ffff;
 
 //
 // 2 - Font
@@ -50,6 +48,7 @@ $font-base: 'Open Sans', sans-serif;
 $font-size-base: 1.6rem;
 
 $font-special-1: 'Lobster', cursive;
+$font-special-2: 'UTM ViceroyJF';
 
 // Don't touch this, it's for em convertion
 $em-base: strip-units($font-size-base) * 10;
@@ -68,6 +67,11 @@ $line-height-M: 1.5;
 $line-height-S: 1.25;
 $line-height-XS: 1;
 
+$fz-feature: 28px;
+$fz-standard: 15px;
+$fz-medium: 18px;
+$fz-large: 30px;
+$fz-small: 12px;
 //
 // 3 - Grid and wrapper
 // ---------------------------------------

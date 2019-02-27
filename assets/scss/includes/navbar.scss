@@ -1,8 +1,8 @@
 .navbar {
     position: relative;
-    background: #ffffff42;
+    background: rgba($white, .2);
     height: 78px;
-    box-shadow: 0 2px $clr-0-lighter;
+    box-shadow: 0 2px $lighter;
     width: 100%;
     z-index: 1;
 }
@@ -75,9 +75,9 @@
         width: 100%;
         top: 78px;
         left: 0;
-        background: $clr-black;
+        background: $black;
         padding: 1rem;
-        color: $clr-light;
+        color: $light;
         @include breakpoint(laptops-desktops) {
             position: static;
             background: none;
@@ -92,15 +92,15 @@
                 position: relative;
             }
             >a, >label {
-                color: $clr-light;
+                color: $light;
                 @include breakpoint(laptops-desktops) {
                     text-decoration: none;
                     text-transform: uppercase;
-                    color: $clr-0-darker;
+                    color: $darker;
                     font-weight: bold;
-                    font-size: 12px;
+                    font-size: ($fz-standard)-3;
                     &:hover {
-                        color: $clr-1;
+                        color: $primary;
                     }
                 }
             }
@@ -115,7 +115,7 @@
         li {
             padding-left: 20px;
             a {
-                color: $clr-0-light;
+                color: $light;
             }
         }
     }
@@ -131,8 +131,8 @@
             padding-right: 30px;
             width: 150px;
             &-tag {
-                color: $clr-black;
-                border-bottom: 1px solid $clr-divider;
+                color: $black;
+                border-bottom: 1px solid $divider;
                 padding-bottom: 14px;
                 font-weight: bold;
                 text-transform: uppercase;
@@ -141,10 +141,10 @@
                 padding-left: 0;
                 padding-top: 20px;
                 a {
-                    color: #737373;
+                    color: $light;
                     text-decoration: none;
                     &:hover {
-                        color: $clr-1;
+                        color: $primary;
                         position: relative;
                         left: -8px;
                     }
@@ -203,8 +203,8 @@
         &:focus {
             width: 140px;
             padding-left: 32px;
-            color: $clr-black;
-            background-color: $clr-light;
+            color: $black;
+            background-color: $light;
             cursor: auto;
         }
     }
@@ -232,40 +232,40 @@ ul.header-cart--item {
 
 h6.product-name {
     display: block;
-    color: #000000;
+    color: $black;
     font-weight: bold;
 }
 
 p.product-price {
     display: block;
-    color: $clr-1-light;
+    color: $primary-light;
     font-weight: bold;
 }
 
 .header-cart-total {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 18px;
+    margin-bottom: $fz-medium;
     span {
-        color: #000000;
+        color: $black;
         font-weight: bold;
     }
     .total-price {
-        color: $clr-1-light;
+        color: $primary-light;
         font-weight: bolder;
     }
 }
 
 .btn-buy {
     padding: 5px 10px;
-    background: #212121;
+    background: $darker;
     width: 72px;
     height: 22px;
-    color: #ffffff;
+    color: $white;
     text-transform: uppercase;
     &:hover {
         text-decoration: none;
-        color: #9cb262;
+        color: lighten($primary, 20);
     }
 }
 

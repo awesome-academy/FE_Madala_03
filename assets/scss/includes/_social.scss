@@ -12,11 +12,11 @@ ul.list-social {
             display: flex;
             align-items: center;
             text-decoration: none;
-            color: $clr-grey;
+            color: $grey;
             text-transform: uppercase;
             i {
                 border-radius: 50%;
-                border: 2px solid $clr-grey;
+                border: 2px solid $grey;
                 display: flex;
                 padding: 10px;
                 height: 40px;
@@ -26,13 +26,13 @@ ul.list-social {
 
             span {
                 padding-left: 5px;
-                font-size: 10px;
+                font-size: ($fz-standard)-5;
                 font-weight: bold;
                 letter-spacing: .2em;
             }
             &:hover, &:hover i {
-                color: $clr-0-dark;
-                border-color: $clr-0-dark;
+                color: $dark;
+                border-color: $dark;
             }
         }
         &:not(:nth-child(1)):not(:nth-child(2)) {

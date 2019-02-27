@@ -21,7 +21,7 @@
     position: relative;
     p {
         text-align: center;
-        font-size: 15px;
+        font-size: $fz-standard;
         width: 80%;
         @include breakpoint(tablets-up) {
             padding-left: 180px;
@@ -59,7 +59,7 @@ ul.dot-pagination {
 }
 
 img.photo {
-    border: 4px solid $clr-divider;
+    border: 4px solid $divider;
     border-radius: 50%;
     padding: 8px;
     margin-right: 20px;
@@ -75,15 +75,15 @@ img.photo {
     padding-left: 30px;
     .name {
         display: block;
-        font-size: 14px;
+        font-size: ($fz-standard)-1;
         @include breakpoint(tablets-up) {
             display: inline;
             padding-right: 10px;
         }
     }
     .position {
-        color: $clr-0-light;
-        font-size: 14px;
+        color: $light;
+        font-size: ($fz-standard)-1;
         @include breakpoint(tablets-up) {
             &::before{
                 content: ' _';

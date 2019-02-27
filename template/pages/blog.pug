@@ -1,0 +1,20 @@
+extends ../layouts/summary
+append config
+    - var title = "Blog"
+    - var metaDesc = "Các bài viết"
+block head_end
+
+block content
+
+    include ../partials/navbar
+    .container
+        .row
+        include ../components/breadcrumb
+        include ../components/switch-pagination
+        include ../components/blog-item
+        include ../partials/blogList
+        include ../components/switch-pagination
+    include ../partials/footer
+
+
+block body_end

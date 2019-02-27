@@ -1,36 +1,36 @@
-.maker-icon {
-    background: url('../images/maker_icon.png') no-repeat;
+@mixin size-icon {
     height: 16px;
     width: 18px;
+}
+.maker-icon {
+    background: url('../images/maker_icon.png') no-repeat;
+    @include size-icon;
 }
 
 .phone-icon {
     background: url('../images/phone_icon.png') no-repeat;
-    height: 16px;
-    width: 18px;
+    @include size-icon;
 }
 
 .fax-icon {
     background: url('../images/fax_icon.png') no-repeat;
-    height: 16px;
-    width: 18px;
+    @include size-icon;
 }
 
 .mail-icon {
     background: url('../images/mail_icon.png') no-repeat;
-    height: 16px;
-    width: 18px;
+    @include size-icon;
 }
 
 .footer {
-    background: $clr-black;
+    background: $black;
     padding-top: 30px;
     .icon {
         margin-right: 10px;
     }
     span {
-        color: $clr-0;
-        font-size: 14px;
+        color: $dark2;
+        font-size: ($fz-standard)-1;
     }
     .about .content-container {
         @include breakpoint(tablets-ipads-p) {
@@ -38,15 +38,13 @@
         }
     }
     &::after {
-        content: '';
-        display: block;
-        clear: both;
+        @include clearfix();
     }
 }
 
 .footer-nav {
     @include breakpoint(laptops-desktops) {
-        border-bottom: 1px solid $clr-0-dark;
+        border-bottom: 1px solid $dark;
     }
 }
 
@@ -56,7 +54,7 @@
     .support,
     .information,
     .myaccount {
-        border-bottom: 1px solid $clr-0-dark;
+        border-bottom: 1px solid $dark;
         padding-top: 30px;
         @include breakpoint(laptops-desktops) {
             border: none;
@@ -65,12 +63,12 @@
             list-style: none;
             li {
                 a {
-                    color: $clr-0;
+                    color: $dark2;
                     text-decoration: none;
-                    font-size: 14px;
+                    font-size: ($fz-standard)-1;
                     
                     &:hover {
-                        color: $clr-1-light;
+                        color: $primary-light;
                     }
                     
                 }
@@ -78,7 +76,7 @@
                 &:hover {
                     list-style-type: square;
                     list-style-position: inside;
-                    color: $clr-1-light;
+                    color: $primary-light;
                     >a {
                         margin-left: -10px;
                     }
@@ -115,7 +113,7 @@
     }
     padding: 20px 30px;
     p {
-        font-size: 15px;
+        font-size: $fz-standard;
         margin-bottom: 8px;
     }
     img {
