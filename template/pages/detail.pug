@@ -1,0 +1,14 @@
+extends ../layouts/summary
+append config
+	- var title = "Detail"
+	- var metaDesc = "Lắc tay tyffany xu hướng mới nhất "
+block head_end
+
+block content
+
+	include ../partials/navbar
+	include ../components/breadcrumb
+	include ../components/productDetail
+	include ../partials/footer
+
+block body_end
