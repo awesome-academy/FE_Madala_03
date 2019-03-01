@@ -1,0 +1,25 @@
+.cart
+    .container
+        .container-title 
+            h3 Giỏ hàng
+        .cart-content
+            table.table
+                thead
+                    tr
+                        each th in ['Ảnh', 'Tên sản phẩm', 'Giá', 'Số lượng', 'Tổng số', 'Xóa']
+                            th(scope='col') #{th}
+                tbody
+                    tr
+                        td
+                            img(src='../images/cart-item.jpg')
+                        td Lắc tay D&G
+                        td(data-end='đ') 445.000
+                        td
+                            input(type='text' value='1')
+                        td(data-end='đ') 445.000
+                        td
+                            img(src='../images/remove-icon.png')
+            .action
+                a.btn.btn-primary(href="#") Tiếp tục mua hàng
+                a.btn.btn-primary(href="#") Xóa
+                a.btn.btn-primary.btn-update(href="#") Cập nhật

@@ -1,0 +1,47 @@
+.cart {
+    padding: 20px 0;
+    &-content {
+        table {
+            width: 100%;
+            th {
+                background: $light;
+                color: $black;
+                text-transform: uppercase;
+                border: 1px solid $border-grey;
+                font-weight: bold;
+                font-size: ($fz-standard)-1;
+                padding: 1rem .75rem;
+            }
+            td {
+                border: 1px solid $border-grey;
+                &:nth-child(3), &:nth-child(5) {
+                    font-family: $font-special-1;
+                }
+                &:after {
+                    content: attr(data-end) ;
+                    vertical-align: super;
+                    font-size: smaller;
+                }
+                input {
+                    width: 20px;
+                    border: 1px solid $border-grey;
+                    text-align: center;
+                    margin: 0 auto;
+                }
+            }
+            td,
+            th {
+                padding: .85rem;
+                text-align: center;
+            }
+        }
+        .action {
+            display: flex;
+            margin-top: 20px;
+            justify-content: flex-end;
+            a {
+                margin-right: 5px;
+            }
+        }
+    }
+}
