@@ -1,0 +1,11 @@
+extends ../layouts/summary
+append config
+    - var title = "Về chúng tôi"
+    - var metaDesc = "Thông tin"
+block head_end
+block content
+    include ../partials/navbar
+    include ../components/breadcrumb
+    include ../partials/about
+    include ../partials/footer
+block body_end

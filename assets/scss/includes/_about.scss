@@ -1,0 +1,26 @@
+.about {
+    padding: 20px 0;
+    &::after {
+        @include clearfix;
+    }
+    .information {
+        .logo {
+            margin: 0 0 20px 0;
+        }
+        h4 {
+            font-size: $fz-standard;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .description {
+            padding-top: 10px;
+            padding-bottom: 15px;
+            font-size: ($fz-small)+1;
+            color: darken($grey, 30);
+        }
+        .readmore {
+            color: $grey;
+            font-size: $fz-small;
+        }
+    }
+}
