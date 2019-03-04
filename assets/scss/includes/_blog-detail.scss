@@ -1,0 +1,111 @@
+@mixin font-style {
+    font-size: ($fz-medium)+2;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.blog-detail {
+    display: inline-block;
+    h3.title {
+        @include font-style;
+        display: none;
+        margin-left: 15px;
+        padding: 15px 0;
+        @include breakpoint(laptops-desktops) {
+            display: block;
+        }
+    }    
+    .main {
+        .post-detail {
+            .title {
+                @include font-style;
+                color: $black;
+                margin-top: 15px;
+            }
+            .description {
+                font-size: ($fz-standard)-1;
+                color: $light;
+            }
+            .blog-tag {
+                padding: 10px 0;
+                margin: 15px 0;
+                span {
+                    color: $light;
+                }
+                a {
+                    color: $black;
+                }
+            }
+        }
+        .feedback-form {
+            .name {
+                font-size: ($fz-standard);
+                text-transform: uppercase;
+            }
+            .form-content {
+                padding: 15px 0;
+            }
+            .form-group {
+                display: flex;
+                margin-bottom: 15px;
+                label {
+                    width: 60px;
+                }
+            }
+        }
+    }
+}
+.sidebar {
+    display: none;
+    @include breakpoint(laptops-desktops) {
+        display: block;
+    }
+    .widget {
+        margin-bottom: 15px;
+        h4.name {
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: $fz-standard;
+            border-bottom: 1px solid $border-grey;
+            padding-bottom: 10px;
+        }
+        &-content {
+            padding: 10px 0;
+        }
+    }
+    .new-post-widget {
+        .item {
+            display: flex;
+            margin-bottom: 26px;
+            img {
+                align-self: center;
+            }
+            .date-by {
+                padding-left: 10px;
+                .date {
+                    span {
+                        font-weight: bold;
+                        font-size: $fz-standard;
+                        color: $black;
+                    }
+                    .day {
+                        font-size: ($fz-medium)+2;
+                    }                        
+                }
+                .by {
+                    font-style: italic;
+                    font-size: ($fz-standard)-1;
+                    color: $light;
+                }
+            }
+        }
+    }
+    .tag {
+        padding: 0;
+        a {
+            &:hover {
+                background: lighten($primary, 5);
+                color: $white;
+            }
+        }
+    }
+}
