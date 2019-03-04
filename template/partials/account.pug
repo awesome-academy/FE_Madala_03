@@ -1,0 +1,33 @@
+.account
+    .container
+        .row
+            .account-content.col-md-9
+                .container-title 
+                    h3 Tài khoản
+                .account-transaction
+                    table.table
+                        thead
+                            tr
+                                each th in ['Order', 'Date', 'Tình trạng thanh toán', 'Tổng', 'Nợ']
+                                    th(scope='col') #{th}
+                        tbody
+                            tr
+                                td #1006
+                                td May 13, 2013
+                                td.pay Đã thanh toán
+                                td 350.000đ
+                                td 0
+            .account-detail.col-md-3
+                .title Chi tiết tài khoản
+                .summary
+                    .name
+                        i.icon.icon-user
+                        .name-content
+                            span.user-name GiangLe
+                            span.email Legian89@gmail.com
+                    .address
+                        i.icon.icon-marker
+                        .address-text Tòa nhà Hà Nội group 442 Đội Cấn, Ba Đình Hà Nội
+                    .phone
+                        i.icon.icon-phone
+                        .phone-text (04) 3786 8904
