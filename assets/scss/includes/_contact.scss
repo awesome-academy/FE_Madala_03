@@ -1,0 +1,26 @@
+.contact {
+    padding: 20px 0;
+    &::after {
+        @include clearfix;
+    }
+}
+
+.contact-form {
+    .summary {
+        .title {
+            font-size: $fz-standard;
+            text-transform: uppercase;
+        }
+        padding-bottom: 30px;
+    }
+    .form-group {
+        display: flex;
+        label {
+            width: 100px;
+        }
+        margin-bottom: 15px;
+    }
+    .btn-send {
+        float: right;
+    }
+}
