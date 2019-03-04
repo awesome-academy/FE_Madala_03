@@ -1,0 +1,51 @@
+.login {
+    padding: 10px 0;
+    .login-title {
+        padding: 10px 0;
+        h3 {
+            font-size: ($fz-medium)+2;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.login-container {
+    background: $light;
+    padding: 30px 50px;
+}
+
+.form .option {
+    margin-top: 10px;
+    display: flex;
+}
+
+.icon-back {
+    background: url('../images/back_icon.png') no-repeat;
+    width: 12px;
+    height: 11px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.login {
+    .login-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .login-form {
+        .form-control {
+            width: 50%;
+        }
+        .option {
+            display: flex;
+            align-items: center;
+            .forget {
+                color: $black;
+                font-size: ($fz-small)+1;
+                margin-right: 10px;
+                text-decoration: none;
+            }
+        }
+    }
+}
