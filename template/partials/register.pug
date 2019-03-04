@@ -1,0 +1,33 @@
+.register
+    .container
+        .register-title
+            h3 Đăng ký
+        .register-container
+            .register-form.form
+                .summary
+                    .title Thông tin cá nhân
+                .form-group
+                    label Tên trước *
+                    input.form-control(type='text')
+                .form-group
+                    label Tên sau *
+                    input.form-control(type='text')
+                .form-group
+                    label Email *
+                    input.form-control(type='email')
+                .form-group
+                    label Password *
+                    input.form-control(type='password')
+                .summary
+                    .title Thông tin đăng nhập
+                .form-group
+                    label Mật khẩu *
+                    input.form-control(type='text')
+                .form-group
+                    label Xác nhận mật khẩu
+                    input.form-control(type='password')
+                .option
+                    button(type='submit' class='btn btn-primary') Gửi
+                    a.btn-primary.btn-back(href='/home.html')
+                        span.icon.icon-back 
+                        span Quay lại
