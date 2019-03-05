@@ -51,12 +51,7 @@ mixin product-item-home(img, branch, name, price_n, price_o)
         .product-item__price
             span.product-item__price--new(data-end='đ') #{price_n}
             span.product-item__price--old(data-end='đ') #{price_o}
-        .product-item__action
-            a.product-item__action--buy(href='/cart.html') Mua hàng
-            .product-item__action--heart
-                i.heart-icon
-            .product-item__action--reload
-                i.reload-icon
+        +action-behavior
 
 //- Product item
 mixin product-item
@@ -88,7 +83,7 @@ mixin new-post-item(img)
 mixin action-behavior
     .product-item__action
         a.product-item__action--buy(href='/cart.html') Mua hàng
-        .product-item_action-heart
+        .product-item__action--heart
             i.heart-icon
         .product-item__action--reload
             i.reload-icon
