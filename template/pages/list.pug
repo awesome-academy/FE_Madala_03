@@ -1,0 +1,21 @@
+extends ../layouts/summary
+append config
+    - var title = "List Product"
+    - var metaDesc = "Danh sách sản phẩm"
+block head_end
+block content
+    include ../partials/navbar
+    include ../components/breadcrumb
+    include ../components/ads
+    .container
+        .row
+            .col-md-3
+                include ../components/product-categories
+                include ../components/compare
+                include ../components/tag
+            .col-md-9
+                include ../components/switch-pagination
+                include ../partials/list
+                include ../components/switch-pagination
+    include ../partials/footer
+block body_end

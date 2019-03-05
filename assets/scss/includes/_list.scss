@@ -1,0 +1,68 @@
+.icon-heart {
+    background: url('../images/heart_icon_bl.png') no-repeat;
+    width: 15px;
+    height: 14px;
+    margin-right: 2px;
+    display: inline-block;
+}
+
+.product-list {    
+    .product-item {
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        @include breakpoint(tablets-up) {
+            flex-direction: row;
+        }
+        .image {
+            text-align: center;
+            @include breakpoint(tablets-up) {
+                flex: 1;
+            }
+            img {
+                border-bottom: 1px dashed $border-grey;
+            }
+        }
+        .product-summary {
+            @include breakpoint(tablets-up) {
+                flex: 2;
+                margin-top: 0;
+                padding-left: 35px;
+            }
+            margin-top: 20px;
+            .title {
+                font-size: $fz-medium;
+                font-weight: bold;
+                color: $light;
+            }
+            .review-wrap {
+                display: flex;
+                padding-top: 4px;
+                .rating {
+                    margin-right: 10px;
+                }
+                .times-buy {
+                    color: $light;
+                    font-size: ($fz-standard)-1;
+                }
+            }
+            .price {
+                font-family: $font-special-1;
+                font-size: ($fz-feature)-4;
+                color: $darker;
+                padding: 15px 0;
+                &::after {
+                    content: attr(data-end);
+                }
+            }
+            .desciption {
+                padding: 10px 0;
+                font-size: ($fz-small)+2;
+                color: $light;
+            }
+            .action {
+                float: left;
+            }
+        }
+    }
+}
