@@ -6,26 +6,6 @@
         li
             a(href='#menu1') Mỹ phẩm
             ul.nav-sub#menu1
-                - 
-                    var
-                        mypham = [
-                            {
-                                name='Dưỡng da',
-                                link='#'
-                            },
-                            {
-                                name='Dưỡng môi',
-                                link='#'
-                            },
-                            {
-                                name='Dưỡng chân',
-                                link='#'
-                            },
-                            {
-                                name='Dưỡng tay',
-                                link='#'
-                            }
-                        ]
                 each sub in mypham
                     li
                         a(href= sub.link) #{sub.name}

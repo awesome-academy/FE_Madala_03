@@ -1,0 +1,38 @@
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    .product__item {
+        width: 50%;
+        @include breakpoint(tablets-ipads-p) {
+            width: 31%;
+        }
+        @include breakpoint(laptops-desktops) {
+            @include grid(3, 1%)
+        }
+        &--action {
+            display: none;
+        }
+        &__branch {
+            font-size: ($fz-small)+1;
+            padding-top: 15px;
+        }
+        &__name {
+            font-size: ($fz-standard)+1;
+        }
+        &__price {
+            color: $darker;
+            font-weight: bold;
+            font-family: $font-special-1;
+            &:after {
+                content: attr(data-end) ;
+                vertical-align: super;
+                font-size: smaller;
+            }
+        }
+        &__img {
+            border-bottom: 1px dashed $border-grey;
+            padding-bottom: 15px;
+        }
+    }
+}
