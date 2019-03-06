@@ -6,62 +6,65 @@
     display: inline-block;
 }
 
-.product-list {    
-    .product-item {
-        margin-bottom: 50px;
-        display: flex;
-        flex-direction: column;
-        @include breakpoint(tablets-up) {
-            flex-direction: row;
-        }
-        .image {
-            text-align: center;
+.list {
+    .product-list {    
+        .product-item {
+            margin-bottom: 50px;
+            display: flex;
+            flex-direction: column;
             @include breakpoint(tablets-up) {
-                flex: 1;
+                flex-direction: row;
+                @include grid(1, 0%)
             }
-            img {
-                border-bottom: 1px dashed $border-grey;
-            }
-        }
-        .product-summary {
-            @include breakpoint(tablets-up) {
-                flex: 2;
-                margin-top: 0;
-                padding-left: 35px;
-            }
-            margin-top: 20px;
-            .title {
-                font-size: $fz-medium;
-                font-weight: bold;
-                color: $light;
-            }
-            .review-wrap {
-                display: flex;
-                padding-top: 4px;
-                .rating {
-                    margin-right: 10px;
+            .image {
+                text-align: center;
+                @include breakpoint(tablets-up) {
+                    flex: 1;
                 }
-                .times-buy {
+                img {
+                    border-bottom: 1px dashed $border-grey;
+                }
+            }
+            .product-summary {
+                @include breakpoint(tablets-up) {
+                    flex: 2;
+                    margin-top: 0;
+                    padding-left: 35px;
+                }
+                margin-top: 20px;
+                .title {
+                    font-size: $fz-medium;
+                    font-weight: bold;
                     color: $light;
-                    font-size: ($fz-standard)-1;
                 }
-            }
-            .price {
-                font-family: $font-special-1;
-                font-size: ($fz-feature)-4;
-                color: $darker;
-                padding: 15px 0;
-                &::after {
-                    content: attr(data-end);
+                .review-wrap {
+                    display: flex;
+                    padding-top: 4px;
+                    .rating {
+                        margin-right: 10px;
+                    }
+                    .times-buy {
+                        color: $light;
+                        font-size: ($fz-standard)-1;
+                    }
                 }
-            }
-            .desciption {
-                padding: 10px 0;
-                font-size: ($fz-small)+2;
-                color: $light;
-            }
-            .action {
-                float: left;
+                .price {
+                    font-family: $font-special-1;
+                    font-size: ($fz-feature)-4;
+                    color: $darker;
+                    padding: 15px 0;
+                    &::after {
+                        content: attr(data-end);
+                    }
+                }
+                .desciption {
+                    padding: 10px 0;
+                    font-size: ($fz-small)+2;
+                    color: $light;
+                }
+                .action {
+                    float: left;
+                }
             }
         }
     }

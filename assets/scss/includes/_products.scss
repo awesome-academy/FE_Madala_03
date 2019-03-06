@@ -110,19 +110,23 @@ ul.product-tabs {
     }
 }
 
+.products {
+    .product-item {
+        text-align: center;
+        @include breakpoint(laptops-desktops) {
+            @include grid(5, 1%);
+            height: 420px;
+        }
+        @include breakpoint(tablets-ipads-p) {
+            @include grid(2, 2%);
+            height: 500px;
+        }
+    }
+}
 .product-item {
     padding: 20px 0;
     margin-bottom: 10px;
     background: $white;
-    text-align: center;
-    @include breakpoint(tablets-ipads-p) {
-        @include grid(2, 2%);
-        height: 500px;
-    }
-    @include breakpoint(laptops-desktops) {
-        @include grid(5, 1%);
-        height: 420px;
-    }
     &__img {
         border-bottom: 1.5px dashed $divider;
     }
